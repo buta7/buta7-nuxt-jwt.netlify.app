@@ -23,8 +23,7 @@
         required
       />
     </v-card-text>
-
-    <v-btn dark>ログイン</v-btn>
+    <v-btn dark @click="submit">ログイン</v-btn>
   </v-card>
 </v-form>
 </v-container>
@@ -39,6 +38,22 @@ export default {
       error: false
     }
   },
+  middleware: 'guest',
+  methods: {
+    async submit () {
+      try {
+        await this.$auth.loginWith('local', {
+          data: {
+            name: this.name,
+            password: this.password
+          }
+        })
+        this.$router.push('/profile')
+      } catch (e) {
+        this.error = true
+      }
+    }
+  }
 }
 </script>
 
