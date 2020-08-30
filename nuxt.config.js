@@ -55,7 +55,7 @@ export default {
     '@nuxtjs/vuetify',
   ],
   axios: {
-    baseURL: 'http://localhost:8080/api'
+    baseURL: process.env.AUTH_API_ENDPOINT || 'http://localhost:8000/api'
   },
   auth: {
     strategies: {

@@ -9,11 +9,10 @@ npm run dev
 
 ```shell
 npm install --save @nuxtjs/axios @nuxtjs/auth @nuxtjs/vuetify
+npm install --save dotenv
 ```
 
-## About mock api server
-
-[GitHub \- windii\-legend/express\-jwt\-mock: Express（Node\.js\)のJWTモックサーバー](https://github.com/windii-legend/express-jwt-mock)
+## Mock API server
 
 ```
 cd express-jwt-mock
@@ -21,9 +20,15 @@ make
 サーバを起動しました。http://localhost:8080
 ```
 
+ユーザ情報は以下の組み合わせ(userDB.json参照)
+
+* tanaka/password
+* jiro/password
+
 ## Link
 
-* [middleware: 'guest',](https://tech.windii.jp/frontend/nuxt/nuxt-jwt-tutorial)
+* [NuxtでJWT認証を導入する \| WINDIIテック](https://tech.windii.jp/frontend/nuxt/nuxt-jwt-tutorial)
+* [GitHub \- windii\-legend/express\-jwt\-mock: Express（Node\.js\)のJWTモックサーバー](https://github.com/windii-legend/express-jwt-mock)
 * [nuxt\-jwt\-example/login\.vue at master · windii\-legend/nuxt\-jwt\-example](https://github.com/windii-legend/nuxt-jwt-example/blob/master/pages/login.vue)
 * [Auth Module \| Auth Module](https://auth.nuxtjs.org/)
 * [Nuxt\.jsのauth moduleとrails APIモードを使用したJWT認証の実装方法について②](https://www.for-engineer.life/entry/nuxt-rails-jwt2/)
