@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>こんにちは、{{ loggedInUser.nickname }}さん！！</h1>
+    <h1>こんにちは、{{ loggedInUser.name }}さん！！</h1>
   </div>
 </template>
 

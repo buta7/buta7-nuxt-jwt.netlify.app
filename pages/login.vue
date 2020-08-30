@@ -12,9 +12,9 @@
       <h3 class="headline mb-0">ログイン</h3>
     </v-card-title>
     <v-card-text>
-      <v-text-field 
-        v-model="name"
-        label="ユーザID"
+      <v-text-field
+        v-model="username"
+        label="ユーザ名"
         required
       />
       <v-text-field
@@ -33,7 +33,7 @@
 export default {
   data() {
     return {
-      name: '',
+      username: '',
       password: '',
       error: false
     }
@@ -44,7 +44,7 @@ export default {
       try {
         await this.$auth.loginWith('local', {
           data: {
-            name: this.name,
+            username: this.username,
             password: this.password
           }
         })
