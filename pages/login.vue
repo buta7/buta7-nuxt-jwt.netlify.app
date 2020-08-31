@@ -23,6 +23,7 @@
         required
       />
     </v-card-text>
+
     <v-btn dark @click="submit">ログイン</v-btn>
   </v-card>
 </v-form>
@@ -45,7 +46,8 @@ export default {
         await this.$auth.loginWith('local', {
           data: {
             username: this.username,
-            password: this.password
+            password: this.password,
+            provider:  process.env.VUE_APP_AUTH_PROVIDER || 'local'
           }
         })
         this.$router.push('/profile')

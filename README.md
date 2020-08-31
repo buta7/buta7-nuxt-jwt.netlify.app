@@ -20,11 +20,6 @@ make
 サーバを起動しました。http://localhost:8080
 ```
 
-ユーザ情報は以下の組み合わせ(userDB.json参照)
-
-* tanaka/password
-* jiro/password
-
 ## Link
 
 * [NuxtでJWT認証を導入する \| WINDIIテック](https://tech.windii.jp/frontend/nuxt/nuxt-jwt-tutorial)
