@@ -27,3 +27,5 @@ make
 * [nuxt\-jwt\-example/login\.vue at master · windii\-legend/nuxt\-jwt\-example](https://github.com/windii-legend/nuxt-jwt-example/blob/master/pages/login.vue)
 * [Auth Module \| Auth Module](https://auth.nuxtjs.org/)
 * [Nuxt\.jsのauth moduleとrails APIモードを使用したJWT認証の実装方法について②](https://www.for-engineer.life/entry/nuxt-rails-jwt2/)
+* [LinuxでSystem limit for number of file watchers reachedが出る原因と対策](https://www.virment.com/how-to-fix-system-limit-for-number-of-file-watchers-reached/)
+* [javascript \- DevTools failed to load SourceMap: Could not load content for chrome\-extension \- Stack Overflow](https://stackoverflow.com/questions/61339968/devtools-failed-to-load-sourcemap-could-not-load-content-for-chrome-extension)
