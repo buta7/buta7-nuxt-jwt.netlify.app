@@ -56,19 +56,17 @@ export default {
     '@nuxtjs/proxy'
   ],
   axios: {
-    //baseURL: process.env.AUTH_API_ENDPOINT || 'http://localhost:8000/api',
     proxy: true
   },
   proxy: {
     '/auth/': { target: process.env.AUTH_API_ENDPOINT || 'http://localhost:8000/api', pathRewrite: {'^/auth/': ''} }
-    //'/auth/': process.env.AUTH_API_ENDPOINT
  },
   auth: {
     strategies: {
       local: {
         endpoints: {
           login: { url: 'auth/login/', method: 'post', propertyName: 'access_token' },
-          user: { url: 'auth/user/', method: 'get',propertyName: ''},
+          user: { url: 'auth/user/', method: 'get', propertyName: '' },
           logout: false
         }
       }
