@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/auth/*"
-  to = "AUTH_API_ENDPOINT"
+  to = AUTH_API_ENDPOINT
   status = 200
   force = true
   headers = {X-From = "Netlify"}

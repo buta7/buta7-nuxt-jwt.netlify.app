@@ -15,12 +15,13 @@
       <v-text-field
         v-model="username"
         label="ユーザ名"
-        required
       />
       <v-text-field
         v-model="password"
         label="パスワード"
-        required
+        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
+        :type="show1 ? 'text' : 'password'"
+        @click:append="show1 = !show1"
       />
     </v-card-text>
 
