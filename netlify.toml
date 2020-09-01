@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/auth/*"
-  to = "AUTH_API_ENDPOINT"
+  to = "https://iris.toyoake.or.jp/toyoauth/api/v1.0/"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
