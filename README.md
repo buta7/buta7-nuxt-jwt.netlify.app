@@ -53,5 +53,6 @@ make
 * error/warning
     * [LinuxでSystem limit for number of file watchers reachedが出る原因と対策](https://www.virment.com/how-to-fix-system-limit-for-number-of-file-watchers-reached/)
     * [javascript \- DevTools failed to load SourceMap: Could not load content for chrome\-extension \- Stack Overflow](https://stackoverflow.com/questions/61339968/devtools-failed-to-load-sourcemap-could-not-load-content-for-chrome-extension)
-* misc
+* dotenv
     * [Nuxt\.jsでdotenv\-moduleを使い、nuxt\.config\.jsから値が読み取れないときの原因と対応 \| nansystem](https://nansystem.com/nuxt-dotenv-module-pitfall/)
+    * [Nuxt\.js\+Netlify\+Contentfulの環境でアクセストークンエラーになる現象のメモ](https://protoout.studio/posts/nuxtjs-netlify-contentful)

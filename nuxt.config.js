@@ -63,6 +63,7 @@ export default {
     '/auth/': { target: process.env.AUTH_API_ENDPOINT || 'http://localhost:8000/api', pathRewrite: {'^/auth/': ''} }
  },
   auth: {
+    /*
     strategies: {
       local: {
         endpoints: {
@@ -72,6 +73,33 @@ export default {
         }
       }
     }
+    */
+   strategies: {
+    local: {
+      scheme: 'refresh',
+      token: {
+        property: 'access_token',
+        maxAge: 1800,
+        // type: 'Bearer'
+      },
+      refreshToken: {
+        property: 'refresh_token',
+        data: 'refresh_token',
+        maxAge: 60 * 60 * 24 * 30
+      },
+      user: {
+        property: 'user',
+       // autoFetch: true
+      },
+      endpoints: {
+        login: { url: 'auth/login', method: 'post' },
+        refresh: { url: 'auth/refresh', method: 'post' },
+        user: { url: 'auth/user', method: 'get' },
+        logout: { url: 'auth/logout', method: 'post' }
+      },
+      // autoLogout: false
+    }
+  }
   },
   vuetify: {
     theme: {
