@@ -16,6 +16,12 @@ run: ## Run Server
 build: ## Build contents
 	npm run build
 
+clean: ## Clean packages
+	rm -fr node_modules package-lock.json
+
+install: clean ## Install packages
+	npm install
+
 help: ## Print this help
 	@echo 'Usage: make [target]'
 	@echo ''

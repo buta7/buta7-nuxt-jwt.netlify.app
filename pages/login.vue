@@ -56,7 +56,6 @@ export default {
           }
         })
         console.log(response)
-        console.log(process.env.VUE_APP_AUTH_PROVIDER)
         this.$router.push('/profile')
       } catch (e) {
         this.error = true
