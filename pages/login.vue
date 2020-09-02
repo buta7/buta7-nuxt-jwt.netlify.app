@@ -55,14 +55,9 @@ export default {
             provider:  process.env.AUTH_PROVIDER || 'local'
           }
         })
-        console.log('hello')
-        console.log(process.env.AUTH_API_ENDPOINT)
-                console.log(AUTH_API_ENDPOINT)
-        console.log('world')
-        console.log(process.env.AUTH_PROVIDER)
-        console.log(AUTH_PROVIDER)
-        console.log('good bye')
-        console.log(response)
+        //console.log(process.env.AUTH_API_ENDPOINT)
+        //console.log(process.env.AUTH_PROVIDER)
+        //console.log(response)
         this.$router.push('/profile')
       } catch (e) {
         this.error = true
