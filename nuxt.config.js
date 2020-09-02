@@ -86,5 +86,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  env: {
+    AUTH_API_ENDPOINT: process.env.AUTH_API_ENDPOINT,
+    AUTH_PROVIDER: process.env.AUTH_PROVIDER 
   }
 }
