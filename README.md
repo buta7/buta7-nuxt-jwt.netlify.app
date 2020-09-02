@@ -43,6 +43,8 @@ make
     * [Auth Module \| Auth Module](https://auth.nuxtjs.org/)
     * [Nuxt\.jsのauth moduleとrails APIモードを使用したJWT認証の実装方法について②](https://www.for-engineer.life/entry/nuxt-rails-jwt2/)
     * [nuxt\-jwt\-example/login\.vue at master · windii\-legend/nuxt\-jwt\-example](https://github.com/windii-legend/nuxt-jwt-example/blob/master/pages/login.vue)
+* vuetify
+    * [Getting Started with Vuetify 2\.0\. With the release of Vuetify 2\.0, now is… \| by Ben Hong \| Vue Mastery \| Medium](https://medium.com/vue-mastery/getting-started-with-vuetify-2-0-522ad3a55154)
 * netlify
     * [Nuxt\.jsでNetlifyにデプロイする時にパスのリライト設定をする \- Qiita](https://qiita.com/kaki_0704/items/8174b0e6eed7a7f762dc)
     * [Rewrites and proxies \| Netlify Docs](https://docs.netlify.com/routing/redirects/rewrites-proxies/#signed-proxy-redirects)

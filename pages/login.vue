@@ -15,13 +15,16 @@
       <v-text-field
         v-model="username"
         label="ユーザ名"
+        prepend-icon="mdi-account-circle"
+
       />
       <v-text-field
         v-model="password"
         label="パスワード"
-        :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-        :type="show1 ? 'text' : 'password'"
-        @click:append="show1 = !show1"
+        prepend-icon="mdi-lock"
+        :append-icon="show_password ? 'mdi-eye' : 'mdi-eye-off'"
+        :type="show_password ? 'text' : 'password'"
+        @click:append="show_password = !show_password"
       />
     </v-card-text>
 
@@ -37,7 +40,8 @@ export default {
     return {
       username: '',
       password: '',
-      error: false
+      error: false,
+      show_password: false
     }
   },
   middleware: 'guest',
