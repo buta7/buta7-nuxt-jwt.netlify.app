@@ -55,6 +55,8 @@ export default {
             provider:  process.env.AUTH_PROVIDER || 'local'
           }
         })
+        console.log(process.env.AUTH_API_ENDPOINT)
+        console.log(process.env.AUTH_PROVIDER)
         console.log(response)
         this.$router.push('/profile')
       } catch (e) {
@@ -62,9 +64,6 @@ export default {
         console.log(response)
       }
     }
-  },
-  mounted() {
-    console.log(process.env.VUE_APP_AUTH_PROVIDER)
   }
 }
 </script>
