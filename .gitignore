@@ -93,3 +93,4 @@ sw.*
 *.bak
 *.orig
 TODO.org
+package-lock.json

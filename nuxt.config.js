@@ -53,7 +53,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth',
     '@nuxtjs/vuetify',
-    '@nuxtjs/proxy'
+    '@nuxtjs/proxy',
+    '@nuxtjs/dotenv'
   ],
   axios: {
     proxy: true

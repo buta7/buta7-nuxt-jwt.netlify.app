@@ -48,18 +48,24 @@ export default {
   methods: {
     async submit () {
       try {
-        await this.$auth.loginWith('local', {
+        let response = await this.$auth.loginWith('local', {
           data: {
             username: this.username,
             password: this.password,
-            provider:  process.env.VUE_APP_AUTH_PROVIDER || 'local'
+            provider:  process.env.AUTH_PROVIDER || 'local'
           }
         })
+        console.log(response)
+        console.log(process.env.VUE_APP_AUTH_PROVIDER)
         this.$router.push('/profile')
       } catch (e) {
         this.error = true
+        console.log(response)
       }
     }
+  },
+  mounted() {
+    console.log(process.env.VUE_APP_AUTH_PROVIDER)
   }
 }
 </script>
