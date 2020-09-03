@@ -80,7 +80,7 @@ export default {
       token: {
         property: 'access_token',
         maxAge: 1800,
-        // type: 'Bearer'
+        type: 'Bearer'
       },
       refreshToken: {
         property: 'refresh_token',
@@ -88,14 +88,14 @@ export default {
         maxAge: 60 * 60 * 24 * 30
       },
       user: {
-        property: 'user',
-       // autoFetch: true
+        property: false,
+        autoFetch: false
       },
       endpoints: {
-        login: { url: 'auth/login', method: 'post' },
-        refresh: { url: 'auth/refresh', method: 'post' },
-        user: { url: 'auth/user', method: 'get' },
-        logout: { url: 'auth/logout', method: 'post' }
+        login: { url: 'auth/login/', method: 'post', propertyName: 'access_token' },
+        refresh: { url: 'auth/refresh/', method: 'post', propertyName: 'refreh_token' },
+        user: { url: 'auth/user/', method: 'get', propertyName: false },
+        logout: { url: 'auth/logout/', method: 'post' }
       },
       // autoLogout: false
     }
@@ -117,6 +117,6 @@ export default {
   },
   env: {
     AUTH_API_ENDPOINT: process.env.AUTH_API_ENDPOINT,
-    AUTH_PROVIDER: process.env.AUTH_PROVIDER 
+    AUTH_PROVIDER: process.env.AUTH_PROVIDER
   }
 }

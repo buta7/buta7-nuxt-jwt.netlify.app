@@ -61,7 +61,7 @@ export default {
         this.$router.push('/profile')
       } catch (e) {
         this.error = true
-        console.log(response)
+        console.log(e)
       }
     }
   }

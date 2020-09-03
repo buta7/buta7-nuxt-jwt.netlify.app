@@ -29,7 +29,36 @@ make
     * Build command: npm run generate
     * Publish directory: dist 
 * 環境変数
-    * `AUTH_API_ENDPOINT`
+    * `AUTH_API_ENDPOINT`: 認証サーバのエンドポイント
+    * ` AUTH_PROVIDER`: 認証プロバイダ
+
+nuxt.config.jsのenvセクションにも記述が必要
+
+```javascript
+  env: {
+    AUTH_API_ENDPOINT: process.env.AUTH_API_ENDPOINT,
+    AUTH_PROVIDER: process.env.AUTH_PROVIDER
+  }
+```
+
+### netlify.toml
+
+プロクシを使っているためCORSのエラーが発生するのでredirectで対処する
+
+```toml
+[[redirects]]
+  from = "/auth/*"
+  to = "AUTH_API_ENDPOINT:splat"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+```
+
+Build commandを以下に変更
+
+```shell
+sed -i s/AUTH_API_ENDPOINT/${AUTH_API_ENDPOINT}/g netlify.toml && npm run generate
+```
 
 ## Link
 
@@ -48,6 +77,7 @@ make
 * netlify
     * [Nuxt\.jsでNetlifyにデプロイする時にパスのリライト設定をする \- Qiita](https://qiita.com/kaki_0704/items/8174b0e6eed7a7f762dc)
     * [Rewrites and proxies \| Netlify Docs](https://docs.netlify.com/routing/redirects/rewrites-proxies/#signed-proxy-redirects)
+    * [File\-based configuration \| Netlify Docs](https://docs.netlify.com/configure-builds/file-based-configuration/#inject-environment-variable-values)
 * backend
     * [GitHub \- windii\-legend/express\-jwt\-mock: Express（Node\.js\)のJWTモックサーバー](https://github.com/windii-legend/express-jwt-mock)
 * error/warning
