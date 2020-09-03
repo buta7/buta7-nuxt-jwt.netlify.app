@@ -54,10 +54,10 @@ nuxt.config.jsのenvセクションにも記述が必要
   headers = {X-From = "Netlify"}
 ```
 
-Build commandを以下に変更
+Build commandを以下に変更(スラッシュがエラーになるのでチルダを使用)
 
 ```shell
-sed -i s/AUTH_API_ENDPOINT/${AUTH_API_ENDPOINT}/g netlify.toml && npm run generate
+sed -i "s~AUTH_API_ENDPOINT~${AUTH_API_ENDPOINT}~g" netlify.toml && npm run generate
 ```
 
 ## Link
