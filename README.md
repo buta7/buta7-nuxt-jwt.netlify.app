@@ -72,6 +72,7 @@ sed -i "s~AUTH_API_ENDPOINT~${AUTH_API_ENDPOINT}~g" netlify.toml && npm run gene
     * [Auth Module \| Auth Module](https://auth.nuxtjs.org/)
     * [Nuxt\.jsのauth moduleとrails APIモードを使用したJWT認証の実装方法について②](https://www.for-engineer.life/entry/nuxt-rails-jwt2/)
     * [nuxt\-jwt\-example/login\.vue at master · windii\-legend/nuxt\-jwt\-example](https://github.com/windii-legend/nuxt-jwt-example/blob/master/pages/login.vue)
+    * [How to make nuxt auth working with JWT \- a definitive guide \- DEV](https://dev.to/mrnaif2018/how-to-make-nuxt-auth-working-with-jwt-a-definitive-guide-9he)
 * vuetify
     * [Getting Started with Vuetify 2\.0\. With the release of Vuetify 2\.0, now is… \| by Ben Hong \| Vue Mastery \| Medium](https://medium.com/vue-mastery/getting-started-with-vuetify-2-0-522ad3a55154)
 * netlify

@@ -62,25 +62,45 @@ export default {
   proxy: {
     '/auth/': { target: process.env.AUTH_API_ENDPOINT || 'http://localhost:8000/api', pathRewrite: {'^/auth/': ''} }
  },
- /*
   auth: {
     strategies: {
       local: {
         endpoints: {
           login: { url: 'auth/login/', method: 'post', propertyName: 'access_token' },
-          user: { url: 'auth/user/', method: 'get', propertyName: '' },
-          logout: false
+          //user: { url: 'auth/user/', method: 'get', propertyName: '' }, // check token validation
+          user: { url: 'auth/user/info/', method: 'get', propertyName: '' }, // without check token validation
+          //logout: false
+          logout: { url: 'auth/logout/', method: 'post'}
         }
       }
     }
   },
-  */
+ /*
  auth: {
-  //redirect: {
-  //  login: '/',
-  //  home: '/home',
-  //  logout: '/'
-  //},
+  localStorage: false,
+  cookie: {
+    options: {
+      expires: 7
+    }
+  },
+  strategies: {
+    local: {
+      token: {
+        required: false,
+        type: false
+      },
+      endpoints: {
+        login: { url: 'auth/login/', method: 'post', propertyName: 'access_token' },
+        user: { url: 'auth/user/', method: 'get', propertyName: '' },
+        logout: { url: 'auth/logout/', method: 'post'}
+      },
+      maxAge: 10
+    }
+  }
+},
+*/
+ /*
+ auth: {
   strategies: {
     local: {
       scheme: "refresh",
@@ -112,15 +132,8 @@ export default {
       tokenType: 'Bearer '
     }
   },
-  /*
-  token: {
-    name: 'token'
-  },
-  cookie: {
-    name: 'token'
-  }
-  */
 },
+*/
   vuetify: {
     theme: {
       primary: '#3f51b5',
