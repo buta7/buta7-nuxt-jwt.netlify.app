@@ -62,8 +62,8 @@ export default {
   proxy: {
     '/auth/': { target: process.env.AUTH_API_ENDPOINT || 'http://localhost:8000/api', pathRewrite: {'^/auth/': ''} }
  },
+ /*
   auth: {
-    /*
     strategies: {
       local: {
         endpoints: {
@@ -73,34 +73,54 @@ export default {
         }
       }
     }
-    */
-   strategies: {
+  },
+  */
+ auth: {
+  //redirect: {
+  //  login: '/',
+  //  home: '/home',
+  //  logout: '/'
+  //},
+  strategies: {
     local: {
-      scheme: 'refresh',
+      scheme: "refresh",
       token: {
         property: 'access_token',
-        maxAge: 1800,
-        type: 'Bearer'
+        maxAge: 10,
+        // type: 'Bearer'
       },
       refreshToken: {
-        property: 'refresh_token',
-        data: 'refresh_token',
-        maxAge: 60 * 60 * 24 * 30
-      },
-      user: {
-        property: false,
-        autoFetch: false
+        property: "refresh_token",
+        data: "refresh_token",
+        maxAge: 60 * 15
       },
       endpoints: {
-        login: { url: 'auth/login/', method: 'post', propertyName: 'access_token' },
-        refresh: { url: 'auth/refresh/', method: 'post', propertyName: 'refreh_token' },
-        user: { url: 'auth/user/', method: 'get', propertyName: false },
+        login: {
+          url: 'auth/login/',
+          method: 'post',
+          propertyName: 'access_token'
+        },
+        user:  {
+          url: 'auth/user/',
+          method: 'get', 
+          propertyName: '' 
+        },
         logout: { url: 'auth/logout/', method: 'post' }
       },
-      // autoLogout: false
+      autoLogout: false,
+      tokenRequired: true,
+      tokenType: 'Bearer '
     }
-  }
   },
+  /*
+  token: {
+    name: 'token'
+  },
+  cookie: {
+    name: 'token'
+  }
+  */
+},
   vuetify: {
     theme: {
       primary: '#3f51b5',
