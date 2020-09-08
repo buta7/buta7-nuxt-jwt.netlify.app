@@ -1,4 +1,4 @@
-# nuxt-jwt-example
+# hige-nuxt-jwt.netlify.app
 
 Netlifyに外部認証で制限できることを確認(2020/08/31)
 
@@ -30,7 +30,7 @@ make
     * Publish directory: dist 
 * 環境変数
     * `AUTH_API_ENDPOINT`: 認証サーバのエンドポイント
-    * ` AUTH_PROVIDER`: 認証プロバイダ
+    * `AUTH_PROVIDER`: 認証プロバイダ
 
 nuxt.config.jsのenvセクションにも記述が必要
 
