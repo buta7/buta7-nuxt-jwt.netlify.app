@@ -1,6 +1,8 @@
 # buta7-nuxt-jwt.netlify.app
 
-Netlifyに外部認証で制限できることを確認(2020/08/31)
+* Netlifyに外部認証で制限できることを確認
+  * provider動作確認 (2021/04/10)
+    * (Netlifyの環境変数AUTH_PROVIDERを書き換えた場合再デプロイすること)
 
 ## Build Setup
 
@@ -19,14 +21,14 @@ npm install --save @nuxtjs/dotenv
 ```shell
 cd express-jwt-mock
 make
-サーバを起動しました。http://localhost:8080
+サーバを起動しました。http://localhost:5000
 ```
 
 ## Deploy to Netlify
 
 * Build settings
   * Repository: github
-  * Build command: npm run generate
+  * Build command: npm run generate (後述のように直す)
   * Publish directory: dist 
 * 環境変数
   * `AUTH_API_ENDPOINT`: 認証サーバのエンドポイント
