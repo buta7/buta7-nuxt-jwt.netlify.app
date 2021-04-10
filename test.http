@@ -1,0 +1,21 @@
+@endpoint = {{$dotenv AUTH_API_ENDPOINT }}
+
+### Health check
+{{endpoint}}
+
+### Login
+# @name login
+post {{endpoint}}login/
+Content-type: application/json
+
+{
+    "username": "{{$dotenv USERNAME}}",
+    "password": "{{$dotenv PASSWORD}}",
+    "provider": "{{$dotenv AUTH_PROVIDER}}"
+}
+
+### User
+@ACCESS_TOKEN = {{login.response.body.$.access_token}}
+
+{{endpoint}}user/
+Authorization: Bearer {{ACCESS_TOKEN}}

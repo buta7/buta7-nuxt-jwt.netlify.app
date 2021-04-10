@@ -47,6 +47,8 @@ export default {
   middleware: 'guest',
   methods: {
     async submit () {
+      //console.log(process.env.AUTH_API_ENDPOINT)
+      //console.log(process.env.AUTH_PROVIDER)
       try {
         let response = await this.$auth.loginWith('local', {
           data: {
@@ -55,9 +57,7 @@ export default {
             provider:  process.env.AUTH_PROVIDER || 'local'
           }
         })
-        //console.log(process.env.AUTH_API_ENDPOINT)
-        //console.log(process.env.AUTH_PROVIDER)
-        //console.log(response)
+        console.log(response)
         this.$router.push('/profile')
       } catch (e) {
         this.error = true

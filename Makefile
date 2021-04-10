@@ -17,7 +17,7 @@ build: ## Build contents
 	npm run build
 
 clean: ## Clean packages
-	rm -fr node_modules package-lock.json
+	rm -fr node_modules
 
 install: clean ## Install packages
 	npm install
